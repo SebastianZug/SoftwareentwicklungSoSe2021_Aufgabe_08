@@ -1,0 +1,46 @@
+name: Add activity table
+
+on:
+  push:
+  schedule:   
+    - cron:  '30 5,17 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    #if: github.event.pusher.name != 'SebastianZug'
+    steps:
+      # Checkout repository
+      - name: Check out current repository
+        uses: actions/checkout@v2
+
+      - name: Install pipenv
+        run: pip install pipenv
+
+      - uses: FranzDiebold/github-env-vars-action@v2
+      - name: Print environment variables
+        run: |
+             echo "CI_REPOSITORY_OWNER=$CI_REPOSITORY_OWNER"
+             echo "CI_REPOSITORY_NAME=$CI_REPOSITORY_NAME"
+
+      - name: Run generation script
+        env: 
+             TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+             pipenv run python .github/workflows/embedTable.py 
+             cat README.md
+         
+      - name: Commit files
+        run: |
+             git config --local user.email "action@github.com"
+             git config --local user.name "GitHub Action"
+             git add README.md
+             git commit -m "Add new statistics" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+             github_token: ${{ secrets.GITHUB_TOKEN }}
+             branch: main

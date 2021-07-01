@@ -4,6 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+github2pandas = "*"
+tabulate = "*"
+pandas = "*"
 
 [dev-packages]
 
