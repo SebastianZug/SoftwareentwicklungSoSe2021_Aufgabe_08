@@ -6,7 +6,10 @@ SWE: 5. Juli - 9. Juli 2021 (Mm, BWM, ROB, BAI, BGIP, BBWL, BBL, MGIN)
 
 ## Beiträge
 
-
+| login        |   total_added_lines |   total_removed_lines |
+|:-------------|--------------------:|----------------------:|
+| SebastianZug |                  82 |                    12 |
+| actions-user |                   5 |                     0 |
 
 ## Idee der Übung
 
