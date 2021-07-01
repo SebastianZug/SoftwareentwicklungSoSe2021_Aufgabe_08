@@ -16,6 +16,8 @@ jobs:
       # Checkout repository
       - name: Check out current repository
         uses: actions/checkout@v2
+        with:
+            path: 'repo'
 
       - name: Install pipenv
         run: pip install pipenv
@@ -33,8 +35,9 @@ jobs:
         env: 
              TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-             pipenv run python .github/workflows/embedTable.py 
-             cat README.md
+             mkdir data
+             cp .github/workflows/embedTable.py .
+             pipenv run python embedTable.py
          
       - name: Commit files
         run: |
