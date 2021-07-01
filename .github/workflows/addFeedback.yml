@@ -14,13 +14,14 @@ jobs:
     #if: github.event.pusher.name != 'SebastianZug'
     steps:
       # Checkout repository
-      - name: Check out current repository
-        uses: actions/checkout@v2
+      #- name: Check out current repository
+      #  uses: actions/checkout@v2
         #with:
         #    path: "repository/Versions/repo/"
 
       - name: Show repo
         run: |
+             git clone https://github.com/SebastianZug/SoftwareentwicklungSoSe2021_Aufgabe_08.git
              git log
 
       - name: Show version
