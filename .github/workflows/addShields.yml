@@ -17,13 +17,12 @@ jobs:
              echo "CI_REPOSITORY_OWNER=$CI_REPOSITORY_OWNER"
              echo "CI_REPOSITORY_NAME=$CI_REPOSITORY_NAME"
 
-      - name: Install github2pandas
+      - name: Install pipenv
         run: pip install pipenv
 
       - name: Run generation script
         run: |
-             pipenv shell
-             pipenv run python .github/workflows/embedSchield.py 
+             pipenv run python .github/workflows/embedShield.py 
              cat README.md
           
       - name: Commit files
