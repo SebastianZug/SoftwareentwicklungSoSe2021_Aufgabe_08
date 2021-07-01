@@ -25,7 +25,12 @@ jobs:
              ls -all
 
       - name: Install pipenv
-        run: pip install pipenv
+        run: | 
+             pip install pipenv
+             pipenv --python 3.8
+             pipenv install github2pandas 
+             pipenv install tabulate
+             cat Pipfile
 
       - uses: FranzDiebold/github-env-vars-action@v2
       - name: Print environment variables
@@ -37,9 +42,6 @@ jobs:
         env: 
              TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-             pipenv --python 3.8
-             pipenv install github2pandas 
-             pipenv install tabulate
              cp  repository/Versions/repo/.github/workflows/embedTable.py .
              pipenv run python embedTable.py 
              cat repository/Versions/repo/README.md
