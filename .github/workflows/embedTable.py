@@ -8,9 +8,8 @@ github_token = os.environ['TOKEN']
 git_repo_name = os.environ['CI_REPOSITORY_NAME']
 git_repo_owner = os.environ['CI_REPOSITORY_OWNER']
     
-default_data_folder = Path("repo")
-
-readmefilename = "./data/README.md"
+default_data_folder = Path("repository/")
+readmefilename = "repository/Versions/repo/README.md"
 
 def replaceTextBetween(originalText, delimeterA, delimterB, replacementText):
     leadingText = originalText.split(delimeterA)[0]
@@ -22,7 +21,7 @@ if __name__ == "__main__":
     repo = Utility.get_repo(git_repo_owner, git_repo_name, github_token, default_data_folder)
     Version.no_of_proceses = 8
     Version.generate_version_pandas_tables(repo = repo, data_root_dir=default_data_folder)
-    
+
     users = Utility.get_users(default_data_folder)
     print(users)
     pdCommits = Version.get_version(data_root_dir=default_data_folder)
@@ -42,9 +41,3 @@ if __name__ == "__main__":
                                         '\n\n' + counts.to_markdown() + '\n\n')
     with open(readmefilename, 'w') as filehandle:
         filehandle.write(newfilecontent)
-
-
-    
-
-
-
