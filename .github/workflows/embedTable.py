@@ -8,7 +8,7 @@ github_token = os.environ['TOKEN']
 git_repo_name = os.environ['CI_REPOSITORY_NAME']
 git_repo_owner = os.environ['CI_REPOSITORY_OWNER']
     
-default_data_folder = Path("data", git_repo_name)
+default_data_folder = Path("repo", git_repo_name)
 
 readmefilename = "./data/README.md"
 
