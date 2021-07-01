@@ -19,6 +19,11 @@ jobs:
         with:
             path: "repository/Versions/repo/"
 
+      - name: Show repo
+        run: |
+             cd repository/Versions/repo/
+             ls -all
+
       - name: Install pipenv
         run: pip install pipenv
 
