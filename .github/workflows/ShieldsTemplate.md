@@ -1,0 +1,4 @@
+![GitHub contributors](https://img.shields.io/github/contributors/<CI_REPOSITORY_OWNER>/<CI_REPOSITORY_NAME>) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/<CI_REPOSITORY_OWNER>/<CI_REPOSITORY_NAME>)
+![GitHub issues](https://img.shields.io/github/issues/<CI_REPOSITORY_OWNER>/<CI_REPOSITORY_NAME>) ![GitHub closed issues](https://img.shields.io/github/issues-closed/<CI_REPOSITORY_OWNER>/<CI_REPOSITORY_NAME>)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/<CI_REPOSITORY_OWNER>/<CI_REPOSITORY_NAME>) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/<CI_REPOSITORY_OWNER>/<CI_REPOSITORY_NAME>)
+![GitHub Release Date](https://img.shields.io/github/release-date/<CI_REPOSITORY_OWNER>/<CI_REPOSITORY_NAME>?label=release%20published)
