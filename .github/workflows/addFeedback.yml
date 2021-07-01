@@ -21,7 +21,7 @@ jobs:
 
       - name: Show repo
         run: |
-             git clone https://github.com/SebastianZug/SoftwareentwicklungSoSe2021_Aufgabe_08.git
+             git clone https://github.com/SebastianZug/SoftwareentwicklungSoSe2021_Aufgabe_08.git .
              git log
 
       - name: Show version
