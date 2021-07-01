@@ -21,6 +21,8 @@ jobs:
         run: pip install pipenv
 
       - name: Run generation script
+        env: 
+             TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
              pipenv run python .github/workflows/embedShield.py 
              cat README.md
