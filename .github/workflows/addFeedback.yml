@@ -44,9 +44,10 @@ jobs:
          
       - name: Commit files
         run: |
+             cd repository/Versions/repo
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
-             git add repository/Versions/repo/README.md
+             git add README.md
              git commit -m "Add new statistics" -a
              
       - name: Push changes
