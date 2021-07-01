@@ -22,7 +22,7 @@ jobs:
       - name: Show repo
         run: |
              cd repository/Versions/repo/
-             git show 09e67740995c10dd6e8665dc6b2f606440a23218
+             git show b8a4c7e0158c17662e51512c2704d95da85b8eef
 
       - name: Install pipenv
         run: | 
