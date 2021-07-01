@@ -18,7 +18,9 @@ jobs:
              echo "CI_REPOSITORY_NAME=$CI_REPOSITORY_NAME"
 
       - name: Install pipenv
-        run: pip install pipenv
+        run: |
+             pipenv install
+             pip install pipenv
 
       - name: Run generation script
         env: 
