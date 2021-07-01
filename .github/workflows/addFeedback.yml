@@ -16,8 +16,8 @@ jobs:
       # Checkout repository
       - name: Check out current repository
         uses: actions/checkout@v2
-        with: 
-            - path: 'data'
+        with:
+            path: "data"
 
       - name: Install pipenv
         run: pip install pipenv
