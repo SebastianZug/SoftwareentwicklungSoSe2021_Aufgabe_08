@@ -10,26 +10,16 @@ git_repo_owner = os.environ['CI_REPOSITORY_OWNER']
     
 default_data_folder = Path("data", git_repo_name)
 
-readmefilename = "README.md"
+readmefilename = "./data/README.md"
 
 def replaceTextBetween(originalText, delimeterA, delimterB, replacementText):
     leadingText = originalText.split(delimeterA)[0]
     trailingText = originalText.split(delimterB)[1]
     return leadingText + delimeterA + replacementText + delimterB + trailingText
 
-def getDataToPlot(df, author):
-    data = df.copy()
-    data = data[data.author==author]
-    data['day'] = pd.to_datetime(data['commited_at'])
-    data.set_index('day', inplace=True)
-    result = data.groupby(pd.Grouper(freq='D')).sum()
-    result['lines_sum'] = result.total_added_lines.cumsum().astype('int64')
-    return result
-
 if __name__ == "__main__":
     print(git_repo_owner, git_repo_name)
     repo = Utility.get_repo(git_repo_owner, git_repo_name, github_token, default_data_folder)
-    Version.clone_repository(repo=repo, data_root_dir=default_data_folder, github_token=github_token)
     Version.no_of_proceses = 8
     Version.generate_version_pandas_tables(repo = repo, data_root_dir=default_data_folder)
     
@@ -52,7 +42,6 @@ if __name__ == "__main__":
                                         '\n\n' + counts.to_markdown() + '\n\n')
     with open(readmefilename, 'w') as filehandle:
         filehandle.write(newfilecontent)
-    print(newfilecontent)
 
 
     
