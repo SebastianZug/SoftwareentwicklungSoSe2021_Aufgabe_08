@@ -1,1 +1,6 @@
+![GitHub contributors](https://img.shields.io/github/contributors/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2021_Aufgabe_08) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2021_Aufgabe_08)
+![GitHub issues](https://img.shields.io/github/issues/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2021_Aufgabe_08) ![GitHub closed issues](https://img.shields.io/github/issues-closed/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2021_Aufgabe_08)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2021_Aufgabe_08) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2021_Aufgabe_08)
+![GitHub Release Date](https://img.shields.io/github/release-date/ComputerScienceLecturesTUBAF/SoftwareentwicklungSoSe2021_Aufgabe_08?label=release%20published)
+
 # SoftwareentwicklungSoSe2021_Aufgabe_08
