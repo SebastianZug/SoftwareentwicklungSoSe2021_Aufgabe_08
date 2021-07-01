@@ -1,0 +1,9 @@
+data/rawData/
+*-checkpoint.ipynb
+*.cpython-38.pyc
+*.p 
+.vscode/
+Versions.db
+example/data/
+*.txt
+.env
