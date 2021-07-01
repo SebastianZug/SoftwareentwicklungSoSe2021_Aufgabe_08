@@ -16,12 +16,12 @@ jobs:
       # Checkout repository
       - name: Check out current repository
         uses: actions/checkout@v2
-        with:
-            path: "repository/Versions/repo/"
+        #with:
+        #    path: "repository/Versions/repo/"
 
       - name: Show repo
         run: |
-             cd repository/Versions/repo/
+             # cd repository/Versions/repo/
              git show b8a4c7e0158c17662e51512c2704d95da85b8eef
 
       - name: Install pipenv
