@@ -17,7 +17,7 @@ jobs:
       - name: Check out current repository
         uses: actions/checkout@v2
         with:
-            path: "repo"
+            path: "repository/Versions/repo/"
 
       - name: Install pipenv
         run: pip install pipenv
@@ -35,15 +35,15 @@ jobs:
              pipenv --python 3.8
              pipenv install github2pandas 
              pipenv install tabulate
-             cp  repo/.github/workflows/embedTable.py .
+             cp  repository/Versions/repo/.github/workflows/embedTable.py .
              pipenv run python embedTable.py 
-             cat README.md
+             cat repository/Versions/repo/README.md
          
       - name: Commit files
         run: |
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
-             git add repo/README.md
+             git add repository/Versions/repo/README.md
              git commit -m "Add new statistics" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
